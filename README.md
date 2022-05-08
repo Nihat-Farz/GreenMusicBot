@@ -39,6 +39,11 @@
 ### Nihat「 FARZ 」
 <a href="https://telegram.me/nihatfarz"><img src="https://img.shields.io/badge/-Nihat 「 FARZ 」-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
+### Zamanla bota yeniləmələr gətiriləcək.İstəyənlər bot üstündə işlər görə bilər bota əlavə ediləcək.
+
+
+<h2 align="center"> ÖNƏMLİ </h2>
+
 ### SADƏCƏ FORK EDİLİB DƏYİŞİKLİK EDİLMƏSİNƏ İCAZƏ VERİLİR.
 ### ƏKS TƏQDİRDƏ BÜTÜN NƏSLİ ƏCABƏTƏ SÖYÜŞ ÜNVANLANACAQ
 
