@@ -25,7 +25,7 @@ from farz.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
 from farz.admin_check import *
 
 bot = Client(
-    "Anonymous",
+    "GreenMusic",
     bot_token = os.environ["BOT_TOKEN"],
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"]
