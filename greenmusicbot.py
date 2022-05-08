@@ -57,7 +57,7 @@ START_BUTTONS = InlineKeyboardMarkup(
                         "❇️ Grupa Əlavə Et ❇️", url="https://t.me/GGreenmusicbot?startgroup=true")
         ],
         [
-            InlineKeyboardButton("☘️Kömək☘️", callback_data=" help_cb"),
+            InlineKeyboardButton("☘️Kömək☘️", callback_data="help_cb"),
             InlineKeyboardButton("⚙️Support⚙️", url=f"https://t.me/{SUPPORT}")
         ],
         [
