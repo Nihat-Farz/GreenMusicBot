@@ -256,7 +256,8 @@ async def start_private(_, message):
 @bot.on_message(filters.command("help") & filters.private)
 async def start_private(_, message):
     msg = HELP_TEXT.format(message.from_user.mention, OWNER_ID)
-    
+    await message.reply_text(text = msg,
+                             reply_markup = HELP_TEXT)
     
 
 @bot.on_message(filters.command(["ping", "alive"]) & filters.group)
