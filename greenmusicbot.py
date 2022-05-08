@@ -46,8 +46,20 @@ Mən Telegram qrupları üçün sürətli musiqi və video oynatma botuyam.
 ┏━━━━━━━━━━━━━━━━━┓
 ┣[Sahib](tg://user?id={})
 ┗━━━━━━━━━━━━━━━━━┛
-Əlavə məlumatlar üçün ☘️Kömək☘️ butonuna basın.
+Əlavə məlumatlar üçün /help yazın.
 ━━━━━━━━━━━━━━━━━━━━━━
+"""
+
+HELP_TEXT = """<b>» Əsas Əmrlər «</b>
+» /play (sᴏɴɢ/ʏᴛ ʟɪɴᴋ) : Musiqi səsləndirmək üçün.
+» /vplay (sᴏɴɢ/ʏᴛ ʟɪɴᴋ) : Video səsləndirmək üçün.
+» /pause : Yayımı dayandırmaq üçün.
+» /resume : Yayımı davam etmək üçün
+» /skip : Yayımı keçmək üçün.
+» /end : Yayımı sonlandırmaq üçün
+» /playlist : Növbədə olan musiqilərə baxmaq üçün.
+» /qatil vəya /userbotjoin - Asisstant hesabı grupa əlavə etmək üçün.
+» /restart - Botu yenidən başlmaq üçün(Sahib üçün)
 """
 
 START_BUTTONS = InlineKeyboardMarkup(
@@ -57,7 +69,6 @@ START_BUTTONS = InlineKeyboardMarkup(
                         "❇️ Grupa Əlavə Et ❇️", url="https://t.me/GGreenmusicbot?startgroup=true")
         ],
         [
-            InlineKeyboardButton("☘️Kömək☘️", callback_data="help"),
             InlineKeyboardButton("⚙️Support⚙️", url=f"https://t.me/{SUPPORT}")
         ],
         [
@@ -240,6 +251,12 @@ async def start_private(_, message):
     msg = START_TEXT.format(message.from_user.mention, OWNER_ID)
     await message.reply_text(text = msg,
                              reply_markup = START_BUTTONS)
+    
+    
+@bot.on_message(filters.command("help") & filters.private)
+async def start_private(_, message):
+    msg = HELP_TEXT.format(message.from_user.mention, OWNER_ID)
+    
     
 
 @bot.on_message(filters.command(["ping", "alive"]) & filters.group)
@@ -474,22 +491,6 @@ async def resume(_, message):
     else:
         await message.reply_text("» Heçnə səslənmir.")
 
-
-@bot.on_callback_query(filters.regex("help"))
-async def help_cmds(_, query: CallbackQuery):
-    await query.answer("Əmrlər")
-    await query.edit_message_text(
-        f"""<b>» Əsas Əmrlər «</b>
-» /play (sᴏɴɢ/ʏᴛ ʟɪɴᴋ) : Musiqi səsləndirmək üçün.
-» /vplay (sᴏɴɢ/ʏᴛ ʟɪɴᴋ) : Video səsləndirmək üçün.
-» /pause : Yayımı dayandırmaq üçün.
-» /resume : Yayımı davam etmək üçün
-» /skip : Yayımı keçmək üçün.
-» /end : Yayımı sonlandırmaq üçün
-» /playlist : Növbədə olan musiqilərə baxmaq üçün.
-» /qatil vəya /userbotjoin - Asisstant hesabı grupa əlavə etmək üçün.
-» /restart - Botu yenidən başlmaq üçün(Sahib üçün)
-""")
 
 
 @bot.on_message(filters.command("restart"))
