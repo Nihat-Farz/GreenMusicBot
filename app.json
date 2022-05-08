@@ -1,0 +1,36 @@
+{
+  "name": "Green Music Bot",
+  "description": "A Telegram Bot to play audios and videos in telegram videochats.",
+  "keywords": ["music", "voicechat", "telegram"],
+  "logo": "https://telegra.ph/file/6e420e91d0ceb5706f7bd.jpg",
+  "repository": "https://github.com/Nihat-Farz/GreenMusicBot",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "Asisstant Hesab üçün Pyrogram Sessiyası. Buradan ala bilərsiniz. @WebStringBot",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "@BotFather-dən bot tokeni əlavə edin",
+      "required": true
+    },
+    "API_ID": {
+      "description": "my.telegram.org saytından API_ID əlavə edin.",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "my.telegram.org saytından API_HASH əlavə edin.",
+      "required": true
+    },
+    "SUPPORT": {
+      "description": "Bot üçün Support Grupu əlavə edin.(@ işarəsi olmadan yazın.)",
+      "required": true,
+      "value": "WebMMCsupport"
+    },
+    "OWNER_ID": {
+      "description": "Botun sahibi olacaq Hesabın ID-si",
+      "required": true,
+      "value": "5311379425"
+    }
+  }
+}
