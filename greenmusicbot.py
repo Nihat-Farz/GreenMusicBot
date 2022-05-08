@@ -57,7 +57,7 @@ START_BUTTONS = InlineKeyboardMarkup(
                         "❇️ Grupa Əlavə Et ❇️", url="https://t.me/GGreenmusicbot?startgroup=true")
         ],
         [
-            InlineKeyboardButton("☘️Kömək☘️", callback_data="help_cb"),
+            InlineKeyboardButton("☘️Kömək☘️", callback_data="help"),
             InlineKeyboardButton("⚙️Support⚙️", url=f"https://t.me/{SUPPORT}")
         ],
         [
@@ -475,7 +475,7 @@ async def resume(_, message):
         await message.reply_text("» Heçnə səslənmir.")
 
 
-@bot.on_callback_query(filters.regex("help_cb"))
+@bot.on_callback_query(filters.regex("help"))
 async def help_cmds(_, query: CallbackQuery):
     await query.answer("Əmrlər")
     await query.edit_message_text(
