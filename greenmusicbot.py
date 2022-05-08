@@ -21,8 +21,8 @@ from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
-from farz.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
-from farz.admin_check import *
+from Farz.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
+from Farz.admin_check import *
 
 bot = Client(
     "GreenMusic",
