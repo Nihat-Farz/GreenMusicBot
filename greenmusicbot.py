@@ -44,15 +44,12 @@ START_TEXT = """━━━━━━━━━━━━━━━━━━━━━�
 [💚](https://telegra.ph/file/6e420e91d0ceb5706f7bd.jpg) Salam, <b>{}</b> 
 Mən Telegram qrupları üçün sürətli musiqi və video oynatma botuyam.
 ┏━━━━━━━━━━━━━━━━━┓
-┣[Sahib](tg://user?id={})
+┣[Sahib💻](https://t.me/NihatFarz")
 ┗━━━━━━━━━━━━━━━━━┛
-Əlavə məlumatlar üçün /help yazın.
 ━━━━━━━━━━━━━━━━━━━━━━
-"""
-
-HELP_TEXT = """<b>» Əsas Əmrlər «</b>
-» /play (sᴏɴɢ/ʏᴛ ʟɪɴᴋ) : Musiqi səsləndirmək üçün.
-» /vplay (sᴏɴɢ/ʏᴛ ʟɪɴᴋ) : Video səsləndirmək üçün.
+<b>» Əsas Əmrlər «</b>
+» /play (Musiqi adı vəya LİNK) : Musiqi səsləndirmək üçün.
+» /vplay (Musiqi adı vəya LİNK) : Video səsləndirmək üçün.
 » /pause : Yayımı dayandırmaq üçün.
 » /resume : Yayımı davam etmək üçün
 » /skip : Yayımı keçmək üçün.
@@ -62,6 +59,7 @@ HELP_TEXT = """<b>» Əsas Əmrlər «</b>
 » /restart - Botu yenidən başlmaq üçün(Sahib üçün)
 """
 
+
 START_BUTTONS = InlineKeyboardMarkup(
     [
         [
@@ -69,7 +67,7 @@ START_BUTTONS = InlineKeyboardMarkup(
                         "❇️ Grupa Əlavə Et ❇️", url="https://t.me/GGreenmusicbot?startgroup=true")
         ],
         [
-            InlineKeyboardButton("⚙️Support⚙️", url=f"https://t.me/{SUPPORT}")
+            InlineKeyboardButton("⚙️Support⚙️", url=f"https://t.me/{SUPPORT}"),
         ],
         [
             InlineKeyboardButton("🔳Repo🔳", url="https://github.com/Nihat-Farz/GreenMusicBot")
@@ -252,12 +250,6 @@ async def start_private(_, message):
     await message.reply_text(text = msg,
                              reply_markup = START_BUTTONS)
     
-    
-@bot.on_message(filters.command("help") & filters.private)
-async def start_private(_, message):
-    msg = HELP_TEXT.format(message.from_user.mention, OWNER_ID)
-    await message.reply_text(text = msg,
-                             reply_markup = HELP_TEXT)
     
 
 @bot.on_message(filters.command(["ping", "alive"]) & filters.group)
