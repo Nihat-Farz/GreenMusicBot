@@ -1,6 +1,6 @@
 {
   "name": "Green Music Bot",
-  "description": "A Telegram Bot to play audios and videos in telegram videochats.",
+  "description": "Teleqram səsli söhbətlərdə musiqi və videoları səsləndirmək üçün Telegram Botu.",
   "keywords": ["music", "voicechat", "telegram"],
   "logo": "https://telegra.ph/file/6e420e91d0ceb5706f7bd.jpg",
   "repository": "https://github.com/Nihat-Farz/GreenMusicBot",
