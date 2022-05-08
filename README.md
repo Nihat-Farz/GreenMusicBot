@@ -40,6 +40,7 @@
 <a href="https://telegram.me/nihatfarz"><img src="https://img.shields.io/badge/-Nihat 「 FARZ 」-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
 ### SADƏCƏ FORK EDİLİB DƏYİŞİKLİK EDİLMƏSİNƏ İCAZƏ VERİLİR.ƏKS TƏQDİRDƏ BÜTÜN NƏSLİ ƏCABƏTƏ SÖYÜŞ ÜNVANLANACAQ
+### ƏKS TƏQDİRDƏ BÜTÜN NƏSLİ ƏCABƏTƏ SÖYÜŞ ÜNVANLANACAQ
 
 # Herokuya Yerləşdirin 
 
